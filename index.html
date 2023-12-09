@@ -1,15 +1,267 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-bd2231f0.js"></script>
-    <link rel="stylesheet" href="/assets/index-143b70b4.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Laborator - Securitatea Aplicațiilor Web</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    form {
+        background-color: #f7f7f7;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    p {
+        color: #555;
+        font-size: 16px;
+    }
+
+    label {
+        margin-left: 5px;
+    }
+
+    input[type='radio'] {
+        margin: 10px 5px;
+    }
+
+    button {
+        width: 150px;
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    button:hover {
+        background-color: #4cae4c;
+    }
+
+    #buttons-and-result {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    #rezultat {
+        margin-left: 20px;
+        font-size: 18px;
+        color: #5cb85c;
+    }
+
+    .input-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .input-row label {
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+
+    .input-row input[type="text"] {
+        flex-grow: 1;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .incorrect {
+        color: red;
+    }
+
+</style>
+<body>
+<h1>Test Laborator - Securitatea Aplicațiilor Web</h1>
+<form id="quiz-form">
+
+    <div class="input-row">
+        <label for="nume-masterand">Nume masterand:</label>
+        <input type="text" id="nume-masterand" placeholder="Introduceți numele masterandului">
+    </div>
+
+    <div class="question-group" id="question1">
+        <p>1. Care este scopul principal al proiectului de testare OWASP?</p>
+        <input type="radio" id="q1a" name="question1" value="0"><label for="q1a">Furnizarea uneltelor pentru testarea
+        automatizată a securității.</label><br>
+        <input type="radio" id="q1b" name="question1" value="10"><label for="q1b">Ajutorul acordat persoanelor pentru a
+        înțelege ce, de ce, când, unde și cum se testează aplicațiile web.</label><br>
+        <input type="radio" id="q1c" name="question1" value="0"><label for="q1c">Dezvoltarea de noi tehnologii pentru
+        aplicații web.</label><br>
+    </div>
+
+    <div class="question-group" id="question2">
+        <p>2. Care fază nu face parte din cadrul de testare OWASP?</p>
+        <input type="radio" id="q2a" name="question2" value="0"><label for="q2a">Înainte de începerea
+        dezvoltării</label><br>
+        <input type="radio" id="q2b" name="question2" value="0"><label for="q2b">În timpul Definirii și
+        Proiectării</label><br>
+        <input type="radio" id="q2c" name="question2" value="10"><label for="q2c">După Implementare</label><br>
+    </div>
+
+    <div class="question-group" id="question3">
+        <p>3. Ce reprezintă 'Modelarea amenințărilor' în contextul securității aplicațiilor web?</p>
+        <input type="radio" id="q3a" name="question3" value="0"><label for="q3a">O metodă pentru asigurarea
+        securității
+        fizice a serverelor web.</label><br>
+        <input type="radio" id="q3b" name="question3" value="10"><label for="q3b">Un proces pentru identificarea și
+        prioritizarea potențialelor amenințări la un sistem.</label><br>
+        <input type="radio" id="q3c" name="question3" value="0"><label for="q3c">O tehnică pentru modelarea noilor
+        amenințări de securitate.</label><br>
+    </div>
+
+    <div class="question-group" id="question4">
+        <p>4. Care este focusul 'Inspecțiilor manuale și a revizuirilor' în testarea securității?</p>
+        <input type="radio" id="q4a" name="question4" value="0"><label for="q4a">Testarea automată a
+        codului.</label><br>
+        <input type="radio" id="q4b" name="question4" value="10"><label for="q4b">Testarea implicațiilor de
+        securitate ale
+        oamenilor, politicilor și proceselor.</label><br>
+        <input type="radio" id="q4c" name="question4" value="0"><label for="q4c">Inspecția fizică a
+        dispozitivelor
+        hardware.</label><br>
+    </div>
+
+    <div class="question-group" id="question5">
+        <p>5. Care este o practică esențială pentru identificarea și atenuarea vulnerabilităților în faza de
+            dezvoltare?</p>
+        <input type="radio" id="q5a" name="question5" value="0"><label for="q5a">Feedback frecvent din
+        partea
+        clienților.</label><br>
+        <input type="radio" id="q5b" name="question5" value="0"><label for="q5b">Testarea regulată a
+        performanței.</label><br>
+        <input type="radio" id="q5c" name="question5" value="10"><label for="q5c">Incorporarea revizuirilor
+        de
+        securitate în
+        Ciclul de Dezvoltare a Software-ului (SDLC).</label><br>
+    </div>
+
+    <div class="question-group" id="question6">
+        <p>6. Care este scopul 'Revizuirii codului' în securitatea aplicațiilor web?</p>
+        <input type="radio" id="q6a" name="question6" value="0"><label for="q6a">Pentru a îmbunătăți
+        performanța
+        codului.</label><br>
+        <input type="radio" id="q6b" name="question6" value="10"><label for="q6b">Pentru a verifica
+        manual codul în
+        căutarea
+        problemelor de securitate.</label><br>
+        <input type="radio" id="q6c" name="question6" value="0"><label for="q6c">Pentru a valida codul
+        în
+        conformitate cu
+        standardele de codificare.</label><br>
+    </div>
+
+    <div class="question-group" id="question7">
+        <p>7. Care dintre următoarele nu face parte din lista de verificare pentru testarea
+            OWASP?</p>
+        <input type="radio" id="q7a" name="question7" value="10"><label for="q7a">Testarea
+        Performanței</label><br>
+        <input type="radio" id="q7b" name="question7" value="0"><label for="q7b">Colectarea
+        Informațiilor</label><br>
+        <input type="radio" id="q7c" name="question7" value="0"><label for="q7c">Testarea
+        Autentificării</label><br>
+    </div>
+
+    <div class="question-group" id="question8">
+        <p>8. 'Testarea pentru injecție SQL' se încadrează în care categorie de testare în
+            ghidul OWASP?</p>
+        <input type="radio" id="q8a" name="question8" value="0"><label for="q8a">Testarea
+        Logicii de Afaceri</label><br>
+        <input type="radio" id="q8b" name="question8" value="10"><label for="q8b">Testarea
+        Validării
+        Intrărilor</label><br>
+        <input type="radio" id="q8c" name="question8" value="0"><label for="q8c">Testarea Partea
+        Client</label><br>
+    </div>
+
+    <div class="question-group" id="question9">
+        <p>9. Ce reprezintă 'OTG-INFO-002' în ghidul de testare OWASP?</p>
+        <input type="radio" id="q9a" name="question9" value="0"><label for="q9a">Testarea
+        pentru Injecție
+        SQL.</label><br>
+        <input type="radio" id="q9b" name="question9" value="10"><label for="q9b">Identificarea
+        amprentei serverului
+        web.</label><br>
+        <input type="radio" id="q9c" name="question9" value="0"><label for="q9c">Revizuirea
+        comentariilor din
+        paginile web
+        pentru scurgeri de informații.</label><br>
+    </div>
+
+    <div class="question-group" id="question10">
+        <p>10. Care este focusul principal al 'Testării laturii client' în ghidul
+            OWASP?</p>
+        <input type="radio" id="q10a" name="question10" value="0"><label for="q10a">Testarea
+        execuției de cod pe
+        partea de
+        server.</label><br>
+        <input type="radio" id="q10b" name="question10" value="10"><label for="q10b">Testarea
+        vulnerabilităților în
+        scripturile laturii client, cum ar fi JavaScript.</label><br>
+        <input type="radio" id="q10c" name="question10" value="0"><label for="q10c">Inspectarea
+        securității fizice a
+        mașinilor client.</label><br>
+    </div>
+
+
+    <div id="buttons-and-result">
+        <button type="button" onclick="verificaRaspunsuri()">Trimite</button>
+        <button type="button" onclick="resetSelection()">Șterge Selecția</button>
+        <div id="rezultat"></div>
+    </div>
+</form>
+<div id="rezultat"></div>
+
+
+<script>
+    function verificaRaspunsuri() {
+        let scor = 0;
+        let toateIntrebarileRaspunse = true;
+        const formular = document.getElementById('quiz-form');
+        const raspunsuriUtilizator = new FormData(formular);
+
+        document.querySelectorAll('.question-group').forEach(q => q.classList.remove('incorrect'));
+
+        raspunsuriUtilizator.forEach((val, key) => {
+            if (val === "0") {
+                const questionNumber = key.match(/\d+/)[0];
+                document.getElementById(`question${questionNumber}`).classList.add('incorrect');
+            } else {
+                scor += parseInt(val, 10);
+            }
+        });
+
+        if (!toateIntrebarileRaspunse) {
+            document.getElementById('rezultat').textContent = 'Vă rugăm să răspundeți la toate întrebările.';
+            return; // Opriți execuția funcției dacă există întrebări fără răspuns
+        }
+
+        const numeMasterand = document.getElementById('nume-masterand').value || 'Anonim';
+        document.getElementById('rezultat').textContent = `Scorul obținut de ${numeMasterand} este: ${scor}`;
+    }
+
+    function resetSelection() {
+        document.querySelectorAll('.question-group').forEach(q => q.classList.remove('incorrect'));
+        document.getElementById('quiz-form').reset();
+        document.getElementById('rezultat').textContent = '';
+    }
+</script>
+
+</body>
 </html>
